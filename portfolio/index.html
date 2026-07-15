@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faizan - Portfolio</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Georgia, serif;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #faf7f0;
+    padding: 20px 40px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1A1A1A;
+  }
+  .logo span{
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 700;
+}
+
+  nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #1A1A1A;
+  }
+
+  .btn {
+    background: #1A1A1A;
+    color: #F4F1EA;
+    padding: 10px 22px;
+    border-radius: 30px;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    padding: 60px 40px;
+    max-width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    background-color: #faf6f0;
+  }
+
+  .hero-text {
+    max-width: 650px;
+  }
+
+  .eyebrow {
+    color: #be4a1b;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  .hero-text h1 span{
+    font-size: 80px;
+    letter-spacing: -5px;
+}
+  h1 {
+    font-size: 5rem;
+    color: #1A1A1A;
+    margin-bottom: 20px;
+  }
+
+  h1 span {
+    color: #be4a1b;
+  }
+
+  .hero-text p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 16px;
+  }
+
+  .btn-primary {
+    background: #be4a1b;
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: #1A1A1A;
+    border: 1px solid #1A1A1A;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+
+  }
+
+  .hero-card {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+  .letter {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #D97757;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    background: green;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+  }
+
+  /* ===== ABOUT ME ===== */
+  .about {
+    background: #f0eae3;
+    padding: 70px 40px;
+  }
+
+  .about-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .about h2 {
+    font-size: 2.4rem;
+    color: #1A1A1A;
+    margin: 12px 0 40px;
+  }
+
+  .about-row {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  .about-text {
+    flex: 1 1 400px;
+  }
+
+  .about-facts {
+    flex: 0 1 220px;
+  }
+
+  .about-text .lead {
+    font-size: 1.25rem;
+    color: #1A1A1A;
+    line-height: 1.5;
+    margin: 0 0 20px;
+  }
+
+  .about-text p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .fact {
+    border-top: 2px solid #1A1A1A;
+    padding-top: 8px;
+    margin-bottom: 24px;
+  }
+
+  .fact-label {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #555;
+  }
+
+  .fact-value {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1A1A1A;
+    margin-top: 4px;
+  }
+
+  /* ===== SKILLS ===== */
+  .skills {
+    padding: 70px 40px;
+    background-color: #faf6f0;
+  }
+
+  .skills-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .skills h2 {
+    font-size: 2.4rem;
+    color: #1A1A1A;
+    margin: 12px 0 12px;
+  }
+
+  .skills-sub {
+    color: #555;
+    margin-bottom: 40px;
+  }
+
+  .skills-cols {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .skill-col {
+    flex: 1 1 240px;
+  }
+
+  .skill-col h3 {
+    font-size: 1.15rem;
+    color: #1A1A1A;
+    margin-bottom: 16px;
+  }
+
+  .num {
+    color: #D97757;
+    font-size: 0.9rem;
+    margin-right: 6px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tags span {
+    background: #fff;
+    border: 1px solid #E5DED5;
+    padding: 8px 16px;
+    border-radius: 30px;
+    color: #555;
+    font-size: 0.9rem;
+  }
+
+  /* ===== PROJECTS ===== */
+  .projects {
+    background: #261d16;
+    padding: 70px 40px;
+  }
+
+  .projects-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .eyebrow-light {
+    color: #D97757;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+
+  .projects h2 {
+    font-size: 2.4rem;
+    color: #F4F1EA;
+    margin: 0 0 12px;
+  }
+
+  .projects-sub {
+    color: #A89F97;
+    margin-bottom: 30px;
+  }
+
+  .proj {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 32px 0;
+    border-top: 1px solid #3A3531;
+    flex-wrap: wrap;
+  }
+
+  .proj-num {
+    color: #D97757;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  .proj-main {
+    flex: 1;
+  }
+
+  .proj-main h3 {
+    color: #F4F1EA;
+    font-size: 1.4rem;
+    margin: 0 0 10px;
+  }
+
+  .proj-main p {
+    color: #C4BBB2;
+    line-height: 1.6;
+    margin: 0 0 16px;
+    max-width: 600px;
+  }
+
+  .proj-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .proj-tags span {
+    border: 1px solid #4A443F;
+    color: #A89F97;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+  }
+
+  .proj-link {
+    color: #F4F1EA;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  /* ===== CONTACT ===== */
+  .contact {
+    padding: 70px 40px;
+    background-color: #faf6f0;
+  }
+
+  .contact-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+
+  .contact-intro {
+    flex: 1 1 350px;
+  }
+
+  .contact-intro h2 {
+    font-size: 2.4rem;
+    color: #1A1A1A;
+    margin: 12px 0 16px;
+  }
+
+  .contact-intro p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .contact-links {
+    list-style: none;
+  }
+
+  .contact-links li {
+    margin-bottom: 14px;
+  }
+
+  .contact-links a {
+    color: #555;
+    text-decoration: none;
+  }
+
+  .contact-links a:hover {
+    color: #D97757;
+  }
+
+  .contact-form {
+    flex: 1 1 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .field label {
+    font-weight: bold;
+    color: #1A1A1A;
+  }
+
+  .field input,
+  .field textarea {
+    padding: 14px;
+    border: 1px solid #E5DED5;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #fff;
+  }
+
+  .field textarea {
+    min-height: 140px;
+    resize: vertical;
+  }
+
+  .btn-send {
+    align-self: flex-start;
+    background: #be4a1b;
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    .hero,
+    .about-inner,
+    .skills-inner,
+    .projects-inner,
+    .contact-inner {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Faizan <span>portfolio.</span></div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact" class="btn">Get in touch</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="eyebrow">WEB DEVELOPER · LAHORE</div>
+    <h1>Hi, I'm Faizan.<br>I build <span>clean</span> web interfaces.</h1>
+    <p>Computer Science student turning ideas into fast, accessible, hand-coded interfaces. Currently mastering the fundamentals: HTML, CSS, and everything that makes the web feel right.</p>
+    <div class="buttons">
+  <a href="#projects" class="btn-primary">See my work</a>
+  <a href="#contact" class="btn-secondary">Contact me</a>
+</div>
+  </div>
+
+  <div class="hero-card">
+    <img src="images/profilepic.png" alt="Faizan" class="profile-pic">
+
+    
+</div>
+</section>
+
+<section id="about" class="about">
+  <div class="about-inner">
+    <div class="eyebrow">ABOUT ME</div>
+    <h2>A developer who cares about the details.</h2>
+
+    <div class="about-row">
+      <div class="about-text">
+        <p class="lead">I'm a Computer Science student with a soft spot for the front end, the layer people actually touch. I like taking a rough idea and shaping it into something that loads fast, reads clearly, and works on every screen.</p>
+        <p>Right now I'm going deep on the fundamentals: semantic HTML, modern CSS layout with Flexbox and Grid, and responsive design that doesn't fall apart on a phone. I believe you can't fake a strong foundation, so I write everything by hand before reaching for a framework.</p>
+        <p>When I'm not coding, you'll find me breaking down websites I admire to figure out how they were built.</p>
+      </div>
+
+      <div class="about-facts">
+        <div class="fact">
+          <p class="fact-label">Focus</p>
+          <p class="fact-value">Front-end</p>
+        </div>
+        <div class="fact">
+          <p class="fact-label">Based in</p>
+          <p class="fact-value">Lahore, PK</p>
+        </div>
+        <div class="fact">
+          <p class="fact-label">Learning</p>
+          <p class="fact-value">Daily</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="skills">
+  <div class="skills-inner">
+    <div class="eyebrow">SKILLS</div>
+    <h2>The tools I reach for.</h2>
+    <p class="skills-sub">A growing toolkit, built one project at a time.</p>
+
+    <div class="skills-cols">
+      <div class="skill-col">
+        <h3><span class="num">01</span> Languages &amp; Markup</h3>
+        <div class="tags">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+          <span>Python</span>
+          <span>C++</span>
+        </div>
+      </div>
+
+      <div class="skill-col">
+        <h3><span class="num">02</span> Layout &amp; Styling</h3>
+        <div class="tags">
+          <span>Flexbox</span>
+          <span>CSS Grid</span>
+          <span>Responsive Design</span>
+          <span>Animations</span>
+          <span>Accessibility</span>
+        </div>
+      </div>
+
+      <div class="skill-col">
+        <h3><span class="num">03</span> Tools &amp; Workflow</h3>
+        <div class="tags">
+          <span>Git &amp; GitHub</span>
+          <span>VS Code</span>
+          <span>Figma</span>
+          <span>Chrome DevTools</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="projects">
+  <div class="projects-inner">
+    <div class="eyebrow-light">SELECTED WORK</div>
+    <h2>Projects I've been building.</h2>
+    <p class="projects-sub">A few things I've shipped while sharpening my craft.</p>
+
+    <div class="proj-list">
+      <div class="proj">
+        <span class="proj-num">01</span>
+        <div class="proj-main">
+          <h3>Sunrise Weather</h3>
+          <p>A minimal weather dashboard with a location search and a 5-day forecast, laid out entirely with Flexbox and CSS Grid.</p>
+          <div class="proj-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+        <a href="#" class="proj-link">View ↗</a>
+      </div>
+
+      <div class="proj">
+        <span class="proj-num">02</span>
+        <div class="proj-main">
+          <h3>Bento Recipes</h3>
+          <p>A responsive recipe library with filterable cards and a bento-style grid that reflows cleanly from desktop down to mobile.</p>
+          <div class="proj-tags">
+            <span>HTML</span>
+            <span>CSS Grid</span>
+          </div>
+        </div>
+        <a href="#" class="proj-link">View ↗</a>
+      </div>
+
+      <div class="proj">
+        <span class="proj-num">03</span>
+        <div class="proj-main">
+          <h3>TaskFlow Landing</h3>
+          <p>A marketing landing page for a fictional productivity app, complete with pricing tiers and a hand-built responsive navbar.</p>
+          <div class="proj-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Flexbox</span>
+          </div>
+        </div>
+        <a href="#" class="proj-link">View ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="contact-inner">
+    <div class="contact-intro">
+      <div class="eyebrow">CONTACT</div>
+      <h2>Let's build something.</h2>
+      <p>Got a project, a question, or just want to say hi?<br>Drop me a message and I'll get back to you.</p>
+      <ul class="contact-links">
+        <li><a href="mailto:faizan@example.com">faizan@example.com</a></li>
+        <li><a href="#">github.com/faizan</a></li>
+        <li><a href="#">linkedin.com/in/faizan</a></li>
+      </ul>
+    </div>
+
+    <form class="contact-form">
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@example.com" required>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Tell me a bit about it..." required></textarea>
+      </div>
+      <button type="submit" class="btn-send">Send message</button>
+    </form>
+  </div>
+</section>
+
+</body>
+</html>
