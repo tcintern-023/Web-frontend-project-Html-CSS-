@@ -48,20 +48,4 @@ git clone https://github.com/your-username/personal-portfolio.git
 Author:
 Faizan Mudassar
 Computer Science Student | Web Developer
-Preview:
-## 📸 Preview
 
-### Home Section
-![Home](https://github.com/user-attachments/assets/ff9a2cf0-01ce-44c0-b673-1c3d2eec1bc6)
-
-### About Section
-![About](https://github.com/user-attachments/assets/a00d3d6e-bd76-483b-b35c-7c92f51bf4e3)
-
-### Skills Section
-![Skills](https://github.com/user-attachments/assets/7c9c23fc-2fde-4688-bc15-4c90fedb4037)
-
-### Projects Section
-![Projects](https://github.com/user-attachments/assets/f75307a4-ef8a-4137-9d9c-7b8e7d009e51)
-
-### Contact Section
-![Contact](https://github.com/user-attachments/assets/aea68d3b-f90b-4fa6-aed4-a36e07ae0aba)
